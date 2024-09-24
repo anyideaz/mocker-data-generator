@@ -3,7 +3,7 @@ module.exports = `var user = {
         chance: 'guid'
     },
     name: {
-        faker: 'name.findName'
+        faker: 'person.findName'
     },
     email: {
         faker: 'internet.email'
@@ -14,7 +14,7 @@ var house = {
         chance: 'guid'
     },
     address: {
-        faker: 'address.streetAddress'
+        faker: 'location.streetAddress'
     },
     householder: {
         hasOne: 'users'

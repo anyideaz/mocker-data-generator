@@ -3,13 +3,13 @@ module.exports = `var person_with_pseudonyms = {
         chance: 'guid'
     },
     real_name: {
-        faker: "name.firstName"
+        faker: "person.firstName"
     },
     pseudonyms:   [{
-            faker: 'name.firstName',
+            faker: 'person.firstName',
             length: 10,
             fixedLength: true
-    }]    
+    }]
 };
 
 mocker()

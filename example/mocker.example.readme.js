@@ -1,16 +1,16 @@
 var mocker = require('../build/main').default
-var faker = require('faker')
+var { faker } = require('@faker-js/faker')
 var util = require('util')
 
 var user = {
     firstName: {
-        faker: 'name.firstName()'
+        faker: 'person.firstName()'
     },
     lastName: {
-        faker: 'name.lastName()'
+        faker: 'person.lastName()'
     },
     country: {
-        faker: 'address.country()'
+        faker: 'location.country()'
     },
     createdAt: {
         faker: 'date.past()'
@@ -32,7 +32,7 @@ var group = {
     users: [
         {
             function: function () {
-                return this.generators.faker.random.arrayElement(this.db.user)
+                return this.generators.faker.helpers.arrayElement(this.db.user)
                     .username
             },
             length: 10,
@@ -45,10 +45,10 @@ var conditionalField = {
         values: ['HOUSE', 'CAR', 'MOTORBIKE']
     },
     'object.type=="HOUSE",location': {
-        faker: 'address.city()'
+        faker: 'location.city()'
     },
     'object.type=="CAR"||object.type=="MOTORBIKE",speed': {
-        faker: 'random.number()'
+        faker: 'number.int()'
     }
 }
 

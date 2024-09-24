@@ -8,7 +8,7 @@
 
 [![Support link][paypal-badge]][paypal-link]
 
-A simplified way to generate massive mock data based on a schema, using the awesome fake/random data generators like (FakerJs, ChanceJs, CasualJs and RandExpJs), all in one tool to generate your fake data for testing.
+A simplified way to generate massive mock data based on a schema, using the awesome fake/random data generators like ([Faker-JS](https://fakerjs.dev/), ChanceJs, CasualJs and RandExpJs), all in one tool to generate your fake data for testing.
 
 Now the library has been migrated 100% to typescript typing are included.
 
@@ -17,19 +17,19 @@ You can test online here: [https://danibram.github.io/mocker-data-generator/](ht
 ## Getting started
 
 Install the module and the awesome generator you want:
-`npm install mocker-data-generator faker`
+`npm install mocker-data-generator @faker-js/faker`
 
 Import it
 
 ```javascript
 var mocker = require('mocker-data-generator').default // (vanilla way)
-var faker = require('faker')
+var { faker } = require('@faker-js/faker')
 
 
 // or
 
 import mocker from 'mocker-data-generator' // (ES6 or Typescript way)
-import * as faker from 'faker'
+import { faker } from '@faker-js/faker'
 ```
 
 Then use it:
@@ -37,13 +37,13 @@ Then use it:
 ```javascript
 var user = {
     firstName: {
-        faker: 'name.firstName()'
+        faker: 'person.firstName()'
     },
     lastName: {
-        faker: 'name.lastName()'
+        faker: 'person.lastName()'
     },
     country: {
-        faker: 'address.country()'
+        faker: 'location.country()'
     },
     createdAt: {
         faker: 'date.past()'
@@ -65,7 +65,7 @@ var group = {
     users: [
         {
             function: function () {
-                return this.generators.faker.random.arrayElement(this.db.user)
+                return this.generators.faker.helpers.arrayElement(this.db.user)
                     .username
             },
             length: 10,
@@ -78,10 +78,10 @@ var conditionalField = {
         values: ['HOUSE', 'CAR', 'MOTORBIKE']
     },
     'object.type=="HOUSE",location': {
-        faker: 'address.city()'
+        faker: 'location.city()'
     },
     'object.type=="CAR"||object.type=="MOTORBIKE",speed': {
-        faker: 'random.number()'
+        faker: 'number.int()'
     }
 }
 
@@ -364,7 +364,7 @@ Data generation goes with model based composed by generators, the generators can
                // Faker
            [name of the generator injected]: 'path inside the generator'
                // If faker is injected with .addGenerator('faker', faker) then you can use:
-           faker: 'random.arrayElement(db.users).userId'
+           faker: 'helpers.arrayElement(db.users).userId'
                // Function that has included index, length and self that refers at the actual array generation
            function: function (index, length, self){ return /**/ }
 
@@ -384,13 +384,13 @@ It happens!Mocker now is independant of the generators so I hope this will give 
 
 ```javascript
     var mocker = require('../build/main').default
-    var faker = require('faker')
+    var { faker } = require('@faker-js/faker')
     var Randexp = require('randexp')
     var util = require('util')
 
     var user = {
         firstName: {
-            faker: 'name.firstName()'
+            faker: 'person.firstName()'
         },
         notes: {
             randexp: /hello+ (world|to you)/
@@ -421,7 +421,7 @@ It happens!Mocker now is independant of the generators so I hope this will give 
             // Faker
         [name of the generator injected]: 'path inside the generator'
             // If faker is injected with .addGenerator('faker', faker) then you can use:
-        faker: 'random.arrayElement(db.users).userId'
+        faker: 'helpers.arrayElement(db.users).userId'
             // Static
         static: 'any static field'
             // Function
@@ -523,7 +523,7 @@ json-schema-faker is awesome and works really nice, but i need a simplified and 
 
 I couldn't do this without this awesome libraries, so thanks to all:
 
-*   Faker: [[https://github.com/Marak/faker.js](https://github.com/Marak/faker.js)]
+*   Faker: [[https://github.com/faker-js/faker](https://github.com/faker-js/faker)]
 *   Chance: [[https://github.com/victorquinn/chancejs](https://github.com/victorquinn/chancejs)]
 *   Casual: [[https://github.com/boo1ean/casual](https://github.com/boo1ean/casual)]
 *   RandExpJs: [[https://github.com/fent/randexp.js](https://github.com/fent/randexp.js)]
@@ -535,7 +535,7 @@ Licensed under the MIT license. 2022
 
 [paypal-badge]: https://img.shields.io/badge/❤%20support-paypal-blue.svg?style=flat-square
 [paypal-link]: https://www.paypal.me/danibram
-[https://github.com/marak/faker.js]: https://github.com/Marak/faker.js
+[https://github.com/faker-js/faker]: https://github.com/faker-js/faker
 [https://github.com/victorquinn/chancejs]: https://github.com/victorquinn/chancejs
 [https://github.com/boo1ean/casual]: https://github.com/boo1ean/casual
 [https://github.com/fent/randexp.js]: https://github.com/fent/randexp.js

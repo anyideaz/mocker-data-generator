@@ -1,5 +1,5 @@
 import test from 'ava'
-import * as fakerJS from 'faker'
+import { faker as fakerJS } from '@faker-js/faker'
 import { Generator } from '..'
 import { isObject } from '../lib/utils'
 
