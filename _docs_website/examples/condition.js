@@ -1,6 +1,6 @@
 module.exports = `var conditional = {
     condition: {
-        faker: 'helpers.randomize(["email", "user"])'
+        faker: 'helpers.arrayElement(["email", "user"])'
     },
     'object.condition==="email",show': {
         static: 'email'
@@ -16,7 +16,7 @@ module.exports = `var conditional = {
     }
 }
 
-var user = {faker: 'name.findName'}
+var user = {faker: 'person.findName'}
 var email = {faker: 'internet.email'}
 
 mocker()

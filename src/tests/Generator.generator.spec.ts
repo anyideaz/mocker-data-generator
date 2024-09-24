@@ -1,6 +1,6 @@
 import test from 'ava'
 import { Chance } from 'chance'
-import * as fakerJS from 'faker'
+import { faker as fakerJS } from '@faker-js/faker'
 import * as randexp from 'randexp'
 import { Generator } from '..'
 import { isArray } from '../lib/utils'
@@ -24,19 +24,19 @@ test('Should be "lorem.words(1)"', async (t) => {
     t.true(typeof res === 'string')
 })
 
-test('Should be "datatype.number({"max": 1})"', async (t) => {
+test('Should be "number.int({"max": 1})"', async (t) => {
     let res = gen.custom({
         generator: fakerJS,
-        input: 'datatype.number({"max": 1})'
+        input: 'number.int({"max": 1})'
     })
     t.true(typeof res === 'number')
     t.true(res <= 1)
 })
 
-test('Should be "datatype.number({"min": 1, "max": 2})"', async (t) => {
+test('Should be "number.int({"min": 1, "max": 2})"', async (t) => {
     let res = gen.custom({
         generator: fakerJS,
-        input: 'datatype.number({"min": 1, "max": 2})'
+        input: 'number.int({"min": 1, "max": 2})'
     })
     t.true(typeof res === 'number')
     t.true(res <= 2)

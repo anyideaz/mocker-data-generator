@@ -88,13 +88,13 @@
         "release": "Bump package.json version, update CHANGELOG.md, tag a release"
     },
     "devDependencies": {
+        "@faker-js/faker": "^8.4.1",
         "@types/node": "^18.15.13",
         "ava": "^5.1.0",
         "casual-browserify": "^1.5.19",
         "chance": "^1.1.7",
         "codecov": "^3.8.2",
         "conventional-github-releaser": "^3.1.5",
-        "faker": "^5.3.1",
         "gh-pages": "^4.0.0",
         "http-server": "^14.1.1",
         "multiview": "^3.0.1",

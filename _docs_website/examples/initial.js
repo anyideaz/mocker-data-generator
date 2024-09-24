@@ -3,7 +3,7 @@ module.exports = `var cat = {
         chance: 'guid'
     },
     age: {
-        faker: 'random.number({"min": 1, "max": 17})'
+        faker: 'number.int({"min": 1, "max": 17})'
     },
     country: {
         casual: 'country'

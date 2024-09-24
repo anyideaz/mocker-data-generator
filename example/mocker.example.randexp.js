@@ -1,11 +1,11 @@
 var mocker = require('../build/main').default
-var faker = require('faker')
+var { faker } = require('@faker-js/faker')
 var Randexp = require('randexp')
 var util = require('util')
 
 var user = {
     firstName: {
-        faker: 'name.firstName()'
+        faker: 'person.firstName()'
     },
     notes: {
         randexp: /hello+ (world|to you)/

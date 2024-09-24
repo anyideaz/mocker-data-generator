@@ -1,6 +1,6 @@
 var mocker = require('..').default
 var util = require('util')
-var faker = require('faker')
+var { faker } = require('@faker-js/faker')
 
 var cat2 = {
     name: { static: 'txuri' },
