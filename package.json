@@ -1,11 +1,11 @@
 {
-    "name": "mocker-data-generator",
-    "version": "3.0.3",
+    "name": "@coderz/mocker-data-generator",
+    "version": "3.0.4",
     "description": "A simplified way to generate mock data, builds using a simple schema and with the FakerJs",
     "main": "build/main/index.js",
     "typings": "build/main/index.d.ts",
     "module": "build/module/index.js",
-    "repository": "https://github.com/danibram/mocker-data-generator",
+    "repository": "https://github.com/anyideaz/mocker-data-generator",
     "keywords": [
         "mock",
         "data",
@@ -37,7 +37,7 @@
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/danibram/mocker-data-generator/issues"
+        "url": "https://github.com/anyideaz/mocker-data-generator/issues"
     },
     "scripts": {
         "info": "npm-scripts-info",

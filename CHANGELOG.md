@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 3.0.4 (2025-02-15)
+
+
+### Features
+
+* add buildSync method to Mocker class ([772b20d](https://github.com/anyideaz/mocker-data-generator/commit/772b20da6f9ccaba98f20a1361babe5f55810d78))
+* Added a way to obtain actual array while the generation, [@zamnuts](https://github.com/zamnuts) suggestion ([2588a34](https://github.com/anyideaz/mocker-data-generator/commit/2588a347749c0140bfe4dc328ade1f2282781097))
+* Added length on the array function generator, thanks [@zamnuts](https://github.com/zamnuts) ([1f17519](https://github.com/anyideaz/mocker-data-generator/commit/1f17519ced60cf51cd06bb9385ac5c091b8725ad))
+* added min max for value generation randomly with tests. thanks [@jhkim-novavin](https://github.com/jhkim-novavin) ([5eaa6f4](https://github.com/anyideaz/mocker-data-generator/commit/5eaa6f4692c9814e479edbadc0284076c900a11f))
+* added PR [#16](https://github.com/anyideaz/mocker-data-generator/issues/16) Add parameter to hasMany generator, thanks [@justinbarry](https://github.com/justinbarry) ([71d947f](https://github.com/anyideaz/mocker-data-generator/commit/71d947f83486cf344e4a4c2bc754f7480629a037))
+* **build:** new build using Typescript, breaking change in imports, adapted import to be used with es6 ([6114eaf](https://github.com/anyideaz/mocker-data-generator/commit/6114eaff5a560514b489100d14822ef79153bc39))
+* **chore:** easy publish as minor shortcut ([fd1a87b](https://github.com/anyideaz/mocker-data-generator/commit/fd1a87bfe444817b75af88c91398929fab91b83c))
+* **chore:** update chance and tslib, and some devDependencies ([59d0aea](https://github.com/anyideaz/mocker-data-generator/commit/59d0aea51fba7ef2e6b1ea153da4aa8007f07170))
+* **fakerjs:** Added multilanguaje support ([0b94471](https://github.com/anyideaz/mocker-data-generator/commit/0b944711f6543394974eb9c6a240c18162fab1a8))
+* **fakerjs:** Added tests for multilang support ([5078d24](https://github.com/anyideaz/mocker-data-generator/commit/5078d2488fdea636b8a9cd329020eaec8a309eab))
+* **fakerjs:** Updates on the readme ([b79e88f](https://github.com/anyideaz/mocker-data-generator/commit/b79e88f43bb9558b15fe8718643f5f671294c5e0))
+* **Mocker.seed:** add posibility to prepopulate the db. Thanks [@suspiciousfellow](https://github.com/suspiciousfellow) and [@marshallswain](https://github.com/marshallswain) for the idea and the code ([dfb2ad6](https://github.com/anyideaz/mocker-data-generator/commit/dfb2ad64fe002e4b55dfe71d1d65574d5054d6cc))
+* **Mocker.seed:** add tests ([7faafab](https://github.com/anyideaz/mocker-data-generator/commit/7faafab779af49434c47ac63631aea9cebbc9be7))
+* **Mocker.seed:** seed and schema and work together ([68970fc](https://github.com/anyideaz/mocker-data-generator/commit/68970fc3fe7a2072c99d58ed3b1ececd3b6909dd))
+* update faker-js ([d9be8f6](https://github.com/anyideaz/mocker-data-generator/commit/d9be8f65505b5dba6389b7986ce26c270036ef1c))
+
+
+### Bug Fixes
+
+* **appveyor:** update matrix config to install defined node version ([703aa41](https://github.com/anyideaz/mocker-data-generator/commit/703aa41411b3813f3d1af6e79b6d2643a36dec56))
+* Better error throwing and test covered ([20ca0a0](https://github.com/anyideaz/mocker-data-generator/commit/20ca0a07ebec52d425dcf91a6dc88415629a887f))
+* **browserify:** fix browserify builds changing casual to browserify-casual ([de93262](https://github.com/anyideaz/mocker-data-generator/commit/de932625d885c3a39ed77c0d1e0a88ddccc96d4b))
+* **builder:** fix tslint space identation ([b3f9f7c](https://github.com/anyideaz/mocker-data-generator/commit/b3f9f7c54d495ea56df98058ace52fbe62666ef2))
+* Changelog ([8cc7b58](https://github.com/anyideaz/mocker-data-generator/commit/8cc7b58be9108f2da09b8c1a036be7f6a212f6a5))
+* Changelog ([d598862](https://github.com/anyideaz/mocker-data-generator/commit/d59886218ca289c72f39446978fbbeaf5d368804))
+* **docs-website:** added seed example ([d1fa143](https://github.com/anyideaz/mocker-data-generator/commit/d1fa143f20467cf69c87e5cc4a74657429550384))
+* **fakerjs:** Better locale detector and better testing ([f05872d](https://github.com/anyideaz/mocker-data-generator/commit/f05872d4b5c7985604a044b95b58f5c578986f7a))
+* **generation:** added fix when min  = 0 in hasMany, now can produce empty array of data, by default is 1, so you have to specify minimum to 0 in order to have the chance to produce empty arrays ([7f97646](https://github.com/anyideaz/mocker-data-generator/commit/7f976460f6ef3e718667a52a90294ae9791d570e))
+* **gh-pages:** add unpkg ([ca93d07](https://github.com/anyideaz/mocker-data-generator/commit/ca93d07684526af58a7641598c736ea531ca8966))
+* **hasOne:** Issues with eval ([f1ab9e8](https://github.com/anyideaz/mocker-data-generator/commit/f1ab9e86d2c4c93b932f2b2fbde1a54eccfc6e73))
+* **linter:** trying to use supported tslint rule ([5edac70](https://github.com/anyideaz/mocker-data-generator/commit/5edac701b0b3d5d7cc070e14b2bc08c6e9317098))
+* **package:** update randexp to version 0.5.0 ([cfddafd](https://github.com/anyideaz/mocker-data-generator/commit/cfddafdc9527e43a78c6d9d1cf04ae0065390b9c))
+* **test:** separate gh-pages generation modules from the mocker modules for development, some test fails ([2cc421e](https://github.com/anyideaz/mocker-data-generator/commit/2cc421eb04404fcecd8c882090dfc10450eb23c3))
+* **updates:** Update libs to last releases ([a6ce60b](https://github.com/anyideaz/mocker-data-generator/commit/a6ce60bd14625ad1dd886299477cdb25e31dcfec))
+
 ### [3.0.3](https://github.com/danibram/mocker-data-generator/compare/v3.0.2...v3.0.3) (2023-04-22)
 
 ### [3.0.2](https://github.com/danibram/mocker-data-generator/compare/v3.0.1...v3.0.2) (2023-04-22)
