@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.8](https://github.com/anyideaz/mocker-data-generator/compare/v3.0.7...v3.0.8) (2025-02-18)
+
+
+### Bug Fixes
+
+* parse property ([9085995](https://github.com/anyideaz/mocker-data-generator/commit/9085995a9a9356c418f201ff706eae3285c65719))
+
 ### [3.0.7](https://github.com/anyideaz/mocker-data-generator/compare/v3.0.6...v3.0.7) (2025-02-18)
 
 ### 3.0.6 (2025-02-18)
