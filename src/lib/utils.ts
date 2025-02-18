@@ -163,7 +163,7 @@ export const stringToPathOrCall = function (name, fn, cfg) {
 
     args = args2
         ? args2[0] === '{'
-            ? [JSON.parse(args2)]
+            ? [eval(args2)]
             : args2
                   .split(',')
                   .map((e) => (/^\d+$/.test(e) ? Number.parseInt(e) : e))
