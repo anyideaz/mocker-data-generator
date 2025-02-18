@@ -163,7 +163,7 @@ export const stringToPathOrCall = function (name, fn, cfg) {
 
     args = args2
         ? args2[0] === '{'
-            ? [eval(args2)]
+            ? [parseObjectString(args2)]
             : args2
                   .split(',')
                   .map((e) => (/^\d+$/.test(e) ? Number.parseInt(e) : e))
@@ -198,4 +198,17 @@ export const loopInside = function (object: any, path: string) {
         }
         return acc[val]
     }, object)
+}
+
+function parseObjectString(str: any) {
+    // Remove curly braces
+    const content = str.slice(1, -1)
+    // Split by comma and map each key-value pair
+    const pairs = content.split(',').map((pair) => {
+        const [key, value] = pair.split(':').map((s) => s.trim())
+        // Try to convert value to number if possible
+        const val = isNaN(value) ? value : Number(value)
+        return [key, val]
+    })
+    return Object.fromEntries(pairs)
 }
